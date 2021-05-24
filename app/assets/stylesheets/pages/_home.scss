@@ -1,1 +1,32 @@
 // Specific CSS for your home-page
+
+body, html {
+    height: 100%;
+  }
+
+  
+h1{
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 6em;
+    text-align: left;
+    color: white;
+    font-weight: 700;
+}
+
+h2{
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 4em;
+    text-align: left;
+    color: white;
+}
+
+.bg {
+
+    background-image: url("background-index.jpg");
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
