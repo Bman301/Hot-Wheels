@@ -12,7 +12,29 @@
   </head>
 
   <body>
+  <div class="d-flex p-1">
+    <div class="inp-cont">
+    <form class="navbar-container d-flex flex-row p-1" action="">
+      <input class="form-control border-dark rounded-pill m-1" type="text" value="Brand" id="s-input" />
+      <input class="form-control border-dark rounded-pill m-1" type="text" value="Model" id="s-input" />
+      <input class="form-control border-dark rounded-pill m-1" type="date" value="First day" id="s-input" />
+      <input class="form-control border-dark rounded-pill m-1" type="date" value="Last day" id="s-input" />
+      <button id="s-btn" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+    </form>
+    <button type="sign-btn" class="btn btn-dark p-0">Sign Up</button>
+  </div>
+    
+  
+
     <%= yield %>
+  <div class="footer">
+  
+  
+  
+  </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </body>
