@@ -7,7 +7,6 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-<<<<<<< HEAD
 10.times do
   User.create(
     first_name: Faker::Name.first_name,
@@ -40,5 +39,3 @@ statusAvail = ["Available", "Busy"]
     comment: Faker::Lorem.sentence(word_count: 10)
   )
 end
-=======
->>>>>>> master
