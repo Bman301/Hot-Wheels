@@ -1,10 +1,18 @@
 <main class="container">
 	<div class="h1 text-center" id="pageHeaderTitle">HOT WHEELS: CAR LIST</div>
 
+		<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+	</div>
+
+	<br>
+
 <% @cars.each do |car| %>
 	<div class="postcard blue">
 		<a class="postcard__img_link" href="#">
-			<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+			<img class="postcard__img" src="<%= car.photo%>" alt="Image Title" />
 		</a>
 		<div class="postcard__text">
 			<h1 class="postcard__title blue">
@@ -21,4 +29,5 @@
 		</div>
 	</div>
 	<% end %>
+
 </main>

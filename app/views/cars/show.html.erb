@@ -1,23 +1,30 @@
-<h1 class="ml-2 title-showpage" style="background-color: white"><%= @car.title %></h1>
-
 <style>
-  body {
-  background-image: url("https://picsum.photos/1000/1000");
+
+
+.show {
+  background-image: url("<%= @car.photo%>");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   }
 
-  </style>
+</style>
 
 
+<div class="container-fluid mb-5 pb-5 show">
+<br>
+<div class="row">
+<div class="col px-0">
+<h1 class="ml-0 title-showpage px-0" style="background-color: white">&nbsp;<%= @car.title %></h1>
+<div>
+<div class="row mx-0">
+<div class="col-2 mx-0"></div>
+<div class="col-8">
 
+	<article class="postcard blue mt-4">
 
-<div class="container mb-5 pb-5">
-	<article class="postcard blue">
-
-			<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+			<img class="postcard__img" src="<%= @car.photo%>" alt="car photo" />
 	
 		<div class="postcard__text">
 			<h1 class="postcard__title blue"><%= @car.brand %>&nbsp;<%= @car.model %>: <%= @car.year %></h1>
@@ -38,4 +45,9 @@
 			</ul>
 		</div>
 	</article>
+	<div class="mapcard mt-4 mb-5">
+	<h1><%=image_tag("map-test.jpg", alt: "test map", style: 'width: 100%')%></h1>
+</div><br><br><br>
 </div>
+
+</div></div></div>

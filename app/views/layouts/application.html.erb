@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  <%= stylesheet_pack_tag 'application' %>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-     
+
     <form class="form-inline">
       <div class="form-group mb-2">
         <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3; border: none" type="text" value="Brand" >
@@ -30,30 +31,54 @@
         </button>
     </div>
 
-    
+
       <form class="navbar-text">
-     <a href="<%=new_car_path%>"> <button type="add-btn" class="btn btn-dark mx-3">Add Car</button> </a>
-    <a href="<%=new_user_registration_path%>"> <button type="sign-btn" class="btn btn-dark">Sign Up</button></a>
+    <a href="#" data-toggle="modal" data-target="#modal">
+ <button type="add-btn" class="btn btn-dark mx-3">Log in</button> </a>
+
+
+       <a href="#" data-toggle="modal" data-target="#modalUp"> <button type="sign-btn" class="btn btn-dark">Sign Up</button></a>
     </form>
-    
+
       </div>
     </div>
 
   </div>
 
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      <%= render "devise/login"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      <%= render "devise/signUp"%>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
   <%= yield %>
-<div class="container-fluid pt-4 mb-4">
+  <br><br>
+<div class="container-fluid pt-4 mb-4" style="margin-top:80px">
       <div class="row navbar" style="background-color: #F4F4F4">
-      
+
         <div class="col-2"  >
           <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
-       
+
         <div class="col-2" >
-        <p><button type="button"
-            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></p></div>
-       
+        <p><a href="<%= root_path %>"> <button type="button"
+            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></a></p></div>
+
         <div class="col-2 ">
             <p>
             <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
@@ -62,7 +87,7 @@
             <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">About us</button></p></div>
 
          <div class="col-2" id="empty"></div>
-     
+
    <div class="col-2" id="social">
           <%=image_tag("social-media.jpg", alt: "social media logo")%>
           <br><br>
