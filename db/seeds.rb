@@ -29,7 +29,8 @@ lastId = User.last.id
     title: Faker::FunnyName.name,
     price: rand(100..1000),
     description: Faker::Lorem.sentence(word_count: 10),
-    user_id: rand(firstId..lastId)
+    user_id: rand(firstId..lastId),
+    review: Faker::Lorem.sentence(word_count: 10)
   )
 end
 
@@ -43,7 +44,6 @@ carLast = Car.last.id
     start_date: Faker::Date.backward(days: 1),
     end_date: Faker::Date.forward(days: 3),
     pickup_location: Faker::Address.street_address,
-    comment: Faker::Lorem.sentence(word_count: 10),
     user_id: rand(firstId..lastId),
     car_id: rand(carFirst..carLast)
   )
