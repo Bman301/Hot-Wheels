@@ -38,6 +38,8 @@ statusAvail = ["Available", "Busy"]
 carFirst = Car.first.id
 carLast = Car.last.id
 
+trueFalse = ["true", "false"]
+
 10.times do
   Booking.create!(
     status: statusAvail.sample,
@@ -45,6 +47,7 @@ carLast = Car.last.id
     end_date: Faker::Date.forward(days: 3),
     pickup_location: Faker::Address.street_address,
     user_id: rand(firstId..lastId),
-    car_id: rand(carFirst..carLast)
+    car_id: rand(carFirst..carLast),
+    insurance: trueFalse.sample
   )
 end
