@@ -31,17 +31,20 @@
 
   <%= yield %>
   <div class="footer">
-    <div class="container-fluid bg-foot mt-4">
-      <div class="row align-items-center">
-        <div class="col-3 align-middle" id="left-copy">
-          <p class="copy">&copysr; HotWheels 2021</p>
-        </div>
-        <div class="col-3 align-middle" id="home-btn"><button type="button"
-            class="btn btn-secondary btn-lg btn-footer">Home Page</button></div>
-        <div class="col-3 align-middle" id="contact-btn"><button type="button"
-            class="btn btn-secondary btn-lg btn-footer">Contact Us</button></div>
-        <div class="col-3 text-right align-middle" id="social">
+    <div class="container-fluid bg-foot mb-4 mt-4">
+      <div class="row d-flex align-items-center">
+        <div class="col-3 align-middle d-table-cell align-middle" >
+          <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
+        <div class="col-3 align-middle my-auto d-table-cell align-middle" >
+        <p><button type="button"
+            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></p></div>
+        <div class="col-3 align-middle my-auto d-table-cell align-middle">
+            <p><button type="button"
+            class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
+        
+         <div class="col-3 align-middle d-table-cell align-middle" id="social">
           <%=image_tag("social-media.jpg", alt: "social media logo")%>
+          <br><br>
         </div>
       </div>
     </div>
