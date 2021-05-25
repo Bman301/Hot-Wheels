@@ -14,28 +14,39 @@
   <body>
   <div class="d-flex p-1">
     <div class="inp-cont">
-    <form class="navbar-container d-flex flex-row p-1" action="">
-      <input class="form-control border-dark rounded-pill m-1" type="text" value="Brand" id="s-input" />
-      <input class="form-control border-dark rounded-pill m-1" type="text" value="Model" id="s-input" />
-      <input class="form-control border-dark rounded-pill m-1" type="date" value="First day" id="s-input" />
-      <input class="form-control border-dark rounded-pill m-1" type="date" value="Last day" id="s-input" />
-      <button id="s-btn" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
-        <i class="fa fa-search"></i>
-      </button>
+      <form class="navbar-container d-flex flex-row p-1" action="">
+        <input class="form-control border-dark rounded-pill m-1" type="text" value="Brand" id="s-input" />
+        <input class="form-control border-dark rounded-pill m-1" type="text" value="Model" id="s-input" />
+        <input class="form-control border-dark rounded-pill m-1" type="date" value="First day" id="s-input" />
+        <input class="form-control border-dark rounded-pill m-1" type="date" value="Last day" id="s-input" />
+        <button id="s-btn" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
+          <i class="fa fa-search"></i>
+        </button>
     </div>
     </form>
     <button type="sign-btn" class="btn btn-dark p-0">Sign Up</button>
   </div>
-    
-  
 
-    <%= yield %>
+
+
+  <%= yield %>
   <div class="footer">
-  
-  
-  
+    <div class="container-fluid bg-foot mt-4">
+      <div class="row align-items-center">
+        <div class="col-3 align-middle" id="left-copy">
+          <p class="copy">&copysr; HotWheels 2021</p>
+        </div>
+        <div class="col-3 align-middle" id="home-btn"><button type="button"
+            class="btn btn-secondary btn-lg btn-footer">Home Page</button></div>
+        <div class="col-3 align-middle" id="contact-btn"><button type="button"
+            class="btn btn-secondary btn-lg btn-footer">Contact Us</button></div>
+        <div class="col-3 text-right align-middle" id="social">
+          <%=image_tag("social-media.jpg", alt: "social media logo")%>
+        </div>
+      </div>
+    </div>
   </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   </body>
 </html>
