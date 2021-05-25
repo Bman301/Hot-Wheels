@@ -12,55 +12,64 @@
 </head>
 
 <body>
-  <div class="navbar">
+  <div class="navbar navbar-nav">
     <div class="inp-cont">
-      <form class="navbar-container d-flex flex-row p-1" action="">
-        <input class="form-control border-dark rounded-pill m-1" type="text" value="Brand" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="text" value="Model" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="date" value="First day" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="date" value="Last day" id="s-input" />
-        <button id="s-btn" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
-          <i class="fa fa-search"></i>
+      <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3; border: none" type="text" value="Brand" >
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3; border: none" type="text" value="Model">
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3; border: none" type="date" value="First day" >
+        <input class="form-control border-dark rounded-pill m-1 mr-2" style="background-color: #D3D3D3; border: none" type="date" value="Last day">
+        <button id="s-btn" style="background-color: #D3D3D3; border: none" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
+          <i class="fa fa-search  l-2"></i>
         </button>
     </div>
+
+    
+      <form class="navbar-text">
+     <a href="<%=new_car_path%>"> <button type="add-btn" class="btn btn-dark mx-3">Add Car</button> </a>
+    <a href="<%=new_user_registration_path%>"> <button type="sign-btn" class="btn btn-dark">Sign Up</button></a>
     </form>
-    <button type="add-btn" class="btn btn-dark">Add Car</button>
-    <button type="sign-btn" class="btn btn-dark">Sign Up</button>
+    
+      </div>
+    </div>
+
   </div>
 
 
 
   <%= yield %>
-  <div class="footer">
-    <div class="container-fluid bg-foot mb-4 mt-4">
-      <div class="row d-flex align-items-center">
-        
-        <div class="col-2 align-middle d-table-cell align-middle" >
+<div class="container-fluid pt-4 mb-4">
+      <div class="row navbar" style="background-color: #F4F4F4">
+      
+        <div class="col-2"  >
           <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
        
-        <div class="col-2 align-middle my-auto d-table-cell align-middle" >
+        <div class="col-2" >
         <p><button type="button"
             class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></p></div>
        
-        <div class="col-2 align-middle my-auto d-table-cell align-middle">
+        <div class="col-2 ">
             <p>
             <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
 
-             <div class="col-2 align-middle d-table-cell align-middle" id="about-btn"> <p>
+             <div class="col-2 " id="about-btn"> <p>
             <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">About us</button></p></div>
 
-         <div class="col-2 align-middle d-table-cell align-middle" id="empty">
-       
-          <br><br>
-        </div>
+         <div class="col-2" id="empty"></div>
      
-   <div class="col-2 align-middle d-table-cell align-middle" id="social">
+   <div class="col-2" id="social">
           <%=image_tag("social-media.jpg", alt: "social media logo")%>
           <br><br>
         </div>
 
-    </div>
-  </div>
+    </div></div></>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   </body>
