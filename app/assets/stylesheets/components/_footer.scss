@@ -1,0 +1,26 @@
+body, html {
+    height: 100%;
+  }
+  
+  .bgfoot {
+    background-image: url("footer_background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .copy{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3em;
+    text-align: left;
+    color: black;
+  }
+
+  .btn-footer{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    color: black;
+
+  }
