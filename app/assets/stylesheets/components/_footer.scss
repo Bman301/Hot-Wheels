@@ -3,11 +3,7 @@ body, html {
   }
   
   .bgfoot {
-    background-image: url("footer_background.png");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
   }
 
   .copy{
@@ -22,5 +18,7 @@ body, html {
     font-size: 1.3em;
     text-align: center;
     color: black;
+    background-color:#F7F7F7;
+    border-radius: 30px;
 
   }

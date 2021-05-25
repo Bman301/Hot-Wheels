@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>HotWheels</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<head>
+  <title>HotWheels</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+</head>
 
-  <body>
+<body>
   <div class="navbar">
     <div class="inp-cont">
       <form class="navbar-container d-flex flex-row p-1" action="">
@@ -32,19 +32,33 @@
 
   <%= yield %>
   <div class="footer">
-    <div class="container-fluid bg-foot mt-4">
-      <div class="row align-items-center">
-        <div class="col-3 align-middle" id="left-copy">
-          <p class="copy">&copysr; HotWheels 2021</p>
+    <div class="container-fluid bg-foot mb-4 mt-4">
+      <div class="row d-flex align-items-center">
+        
+        <div class="col-2 align-middle d-table-cell align-middle" >
+          <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
+       
+        <div class="col-2 align-middle my-auto d-table-cell align-middle" >
+        <p><button type="button"
+            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></p></div>
+       
+        <div class="col-2 align-middle my-auto d-table-cell align-middle">
+            <p>
+            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
+
+             <div class="col-2 align-middle d-table-cell align-middle" id="about-btn"> <p>
+            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">About us</button></p></div>
+
+         <div class="col-2 align-middle d-table-cell align-middle" id="empty">
+       
+          <br><br>
         </div>
-        <div class="col-3 align-middle" id="home-btn"><button type="button"
-            class="btn btn-secondary btn-lg btn-footer">Home Page</button></div>
-        <div class="col-3 align-middle" id="contact-btn"><button type="button"
-            class="btn btn-secondary btn-lg btn-footer">Contact Us</button></div>
-        <div class="col-3 text-right align-middle" id="social">
+     
+   <div class="col-2 align-middle d-table-cell align-middle" id="social">
           <%=image_tag("social-media.jpg", alt: "social media logo")%>
+          <br><br>
         </div>
-      </div>
+
     </div>
   </div>
   <p class="notice"><%= notice %></p>
