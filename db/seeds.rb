@@ -8,34 +8,43 @@ require 'faker'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  User.create(
+  User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
-    phone: Faker::PhoneNumber.cell_phone
+    phone: Faker::PhoneNumber.cell_phone,
+    password: 123456
   )
 end
 
+firstId = User.first.id
+lastId = User.last.id
+
 10.times do
-  Car.create(
+  Car.create!(
     model: Faker::Vehicle.model,
     brand: Faker::Vehicle.make,
     year: rand(1980..2021),
     location: Faker::Address.street_address,
     title: Faker::FunnyName.name,
     price: rand(100..1000),
-    description: Faker::Lorem.sentence(word_count: 10)
+    description: Faker::Lorem.sentence(word_count: 10),
+    user_id: rand(firstId..lastId)
   )
 end
 
 statusAvail = ["Available", "Busy"]
+carFirst = Car.first.id
+carLast = Car.last.id
 
 10.times do
-  Booking.create(
+  Booking.create!(
     status: statusAvail.sample,
     start_date: Faker::Date.backward(days: 1),
     end_date: Faker::Date.forward(days: 3),
     pickup_location: Faker::Address.street_address,
-    comment: Faker::Lorem.sentence(word_count: 10)
+    comment: Faker::Lorem.sentence(word_count: 10),
+    user_id: rand(firstId..lastId),
+    car_id: rand(carFirst..carLast)
   )
 end
