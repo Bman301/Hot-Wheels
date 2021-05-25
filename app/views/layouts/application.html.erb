@@ -33,20 +33,31 @@
   <div class="footer">
     <div class="container-fluid bg-foot mb-4 mt-4">
       <div class="row d-flex align-items-center">
-        <div class="col-3 align-middle d-table-cell align-middle" >
+        
+        <div class="col-2 align-middle d-table-cell align-middle" >
           <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
-        <div class="col-3 align-middle my-auto d-table-cell align-middle" >
+       
+        <div class="col-2 align-middle my-auto d-table-cell align-middle" >
         <p><button type="button"
             class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></p></div>
-        <div class="col-3 align-middle my-auto d-table-cell align-middle">
-            <p><button type="button"
-            class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
-        
-         <div class="col-3 align-middle d-table-cell align-middle" id="social">
+       
+        <div class="col-2 align-middle my-auto d-table-cell align-middle">
+            <p>
+            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
+
+             <div class="col-2 align-middle d-table-cell align-middle" id="about-btn"> <p>
+            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">About us</button></p></div>
+
+         <div class="col-2 align-middle d-table-cell align-middle" id="empty">
+       
+          <br><br>
+        </div>
+     
+   <div class="col-2 align-middle d-table-cell align-middle" id="social">
           <%=image_tag("social-media.jpg", alt: "social media logo")%>
           <br><br>
         </div>
-      </div>
+
     </div>
   </div>
   <p class="notice"><%= notice %></p>
