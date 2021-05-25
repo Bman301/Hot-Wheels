@@ -44,7 +44,7 @@ class CarsController < ApplicationController
   end
 
   def find_id
-    @car = Car.find(:id)
+    @car = Car.find(params[:id])
   end
 
 
