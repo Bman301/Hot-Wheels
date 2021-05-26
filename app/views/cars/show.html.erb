@@ -2,7 +2,7 @@
 
 <style>
   body {
-  background-image: url("https://picsum.photos/1000/1000");
+  background-image: url("<%= @car.photo%>");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 <div class="container mb-5 pb-5">
 	<article class="postcard blue">
 
-			<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+			<img class="postcard__img" src="<%= @car.photo%>" alt="car photo" />
 	
 		<div class="postcard__text">
 			<h1 class="postcard__title blue"><%= @car.brand %>&nbsp;<%= @car.model %>: <%= @car.year %></h1>
