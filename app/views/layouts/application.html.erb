@@ -12,18 +12,25 @@
 </head>
 
 <body>
-  <div class="navbar">
+  <div class="navbar navbar-expand-lg">
     <div class="inp-cont">
-      <form class="navbar-container d-flex flex-row p-1" action="">
-        <input class="form-control border-dark rounded-pill m-1" type="text" value="Brand" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="text" value="Model" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="date" value="First day" id="s-input" />
-        <input class="form-control border-dark rounded-pill m-1" type="date" value="Last day" id="s-input" />
-        <button id="s-btn" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
-          <i class="fa fa-search"></i>
+      <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3" type="text" value="Brand" >
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3" type="text" value="Model">
+        <input class="form-control border-dark rounded-pill m-1" style="background-color: #D3D3D3" type="date" value="First day" >
+        <input class="form-control border-dark rounded-pill m-1 mr-2" style="background-color: #D3D3D3" type="date" value="Last day">
+        <button id="s-btn" style="background-color: #D3D3D3" class="btn btn-outline-dark btn-lg rounded-pill " type="button">
+          <i class="fa fa-search  l-2"></i>
         </button>
     </div>
-    </form>
+    </div>  </div>
+    </div>
     <button type="add-btn" class="btn btn-dark">Add Car</button>
     <button type="sign-btn" class="btn btn-dark">Sign Up</button>
   </div>
