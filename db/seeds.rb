@@ -19,6 +19,8 @@ end
 
 firstId = User.first.id
 lastId = User.last.id
+carImages = ["https://bit.ly/34nxkbX", "https://bit.ly/3vqhoSa", "https://bit.ly/3fNhEUD", "https://bit.ly/3ui9nxe", "https://bit.ly/3wBIRAw", "https://bit.ly/2SsGhOn", "https://bit.ly/3yFGbne", "https://bit.ly/3hVkIkk", "https://bit.ly/34gzUR0", "https://bit.ly/2SyoPYE", "https://wallpapercave.com/wp/8K3mVCl.jpg", "https://bit.ly/3oQ8MBR", "https://bit.ly/3fLtWg7", "https://wallpaperaccess.com/full/1333809.jpg", "https://bit.ly/3vomI8p", "https://bit.ly/3yEax9C", "https://bit.ly/3bVsxml", "https://bit.ly/3oQMEHk"]
+
 
 10.times do
   Car.create!(
@@ -30,7 +32,8 @@ lastId = User.last.id
     price: rand(100..1000),
     description: Faker::Lorem.sentence(word_count: 10),
     user_id: rand(firstId..lastId),
-    review: Faker::Lorem.sentence(word_count: 10)
+    review: Faker::Lorem.sentence(word_count: 10),
+    photo: carImages.sample
   )
 end
 
