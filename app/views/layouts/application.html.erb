@@ -34,7 +34,9 @@
       <form class="navbar-text">
     <a href="#" data-toggle="modal" data-target="#modal">
  <button type="add-btn" class="btn btn-dark mx-3">Sign in</button> </a>
-    <a href="<%=new_user_registration_path%>"> <button type="sign-btn" class="btn btn-dark">Sign Up</button></a>
+
+
+       <a href="#" data-toggle="modal" data-target="#modalUp"> <button type="sign-btn" class="btn btn-dark">Sign Up</button></a>
     </form>
     
       </div>
@@ -47,6 +49,16 @@
     <div class="modal-content">
       <div class="modal-body">
       <%= render "devise/login"%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+      <%= render "devise/signUp"%>
       </div>
     </div>
   </div>
