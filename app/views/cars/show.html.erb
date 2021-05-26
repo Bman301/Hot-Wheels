@@ -1,7 +1,7 @@
-<h1 class="ml-2 title-showpage" style="background-color: white"><%= @car.title %></h1>
-
 <style>
-  body {
+
+
+.show {
   background-image: url("<%= @car.photo%>");
   height: 100%;
   background-position: center;
@@ -9,13 +9,20 @@
   background-size: cover;
   }
 
-  </style>
+</style>
 
 
+<div class="container-fluid mb-5 pb-5 show">
+<br>
+<div class="row">
+<div class="col px-0">
+<h1 class="ml-2 title-showpage px-0" style="background-color: white"><%= @car.title %></h1>
+<div>
+<div class="row">
+<div class="col-2"></div>
+<div class="col-8">
 
-
-<div class="container mb-5 pb-5">
-	<article class="postcard blue">
+	<article class="postcard blue mt-4">
 
 			<img class="postcard__img" src="<%= @car.photo%>" alt="car photo" />
 	
@@ -38,4 +45,9 @@
 			</ul>
 		</div>
 	</article>
+	<div class="mapcard mt-4">
+	<h1>This is a test</h1>
 </div>
+</div>
+<div class="col-2"></div>
+</div></div>
