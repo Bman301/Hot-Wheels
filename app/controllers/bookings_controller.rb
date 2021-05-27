@@ -15,6 +15,10 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+
+  def index
+    @bookings = Booking.all
+  end
   
   private
 
