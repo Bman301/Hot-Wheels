@@ -15,10 +15,12 @@ class BookingsController < ApplicationController
       render :new
     end
   end
-end
-
- private
+  
+  private
 
   def booking_params
     params.require(:booking).permit(:status, :start_date, :end_date, :pickup_location, :insurance, :comment, :car_id, :user_id)
   end
+end
+
+ 
