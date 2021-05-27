@@ -95,30 +95,23 @@
 <div class="container-fluid pt-4 mb-4" style="margin-top:80px">
       <div class="row navbar" style="background-color: #F4F4F4">
 
-        <div class="col-2"  >
+        <div class="col-4"  >
           <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
 
-        <div class="col-2" >
-        <p><a href="<%= root_path %>"> <button type="button"
-            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></a></p></div>
+        <div class="col-4" >
+      </div>
 
-        <div class="col-2 ">
-            <p>
-            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></p></div>
+        <div class="col-4 text-right">
+              <p><a href="<%= root_path %>"> <button type="button"
+            class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></a>
+          
+           <a href="mailto:email@email.com"> <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></a></p></div>
 
-             <div class="col-2 " id="about-btn"> <p>
-            <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">About us</button></p></div>
-
-         <div class="col-2" id="empty"></div>
-
-   <div class="col-2" id="social">
-          <%=image_tag("social-media.jpg", alt: "social media logo")%>
-          <br><br>
-        </div>
-
-    </div></div></>
+     
+    </div></div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   </body>
 </html>
+
