@@ -4,6 +4,7 @@ class CarsController < ApplicationController
   def index
     if params[:query].present?
       @cars = Car.search_by_model_and_brand(params[:query])
+      params[:query] = ''
     else
       @cars = Car.all
     end
@@ -14,7 +15,7 @@ class CarsController < ApplicationController
       }
     end
 
- 
+
   end
 
   def new

@@ -24,16 +24,16 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-      <div class="border border-primary mr-3 w-25 rounded">
+      <div class="w-25">
         <%= form_tag cars_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
-        class: "form-control",
+        class: "form-control border-dark rounded-pill",
         placeholder: "...Search by Brand or Model"
         %>
       </div>
       <div class="rounded">
-        <%= submit_tag "Search", class: "btn btn-primary" %>
+        <%= submit_tag "Search", class: "btn btn btn-dark mx-3" %>
         <% end %>
       </div>
       <div class="nav-item text-right mr-sm-2 d-flex justify-content-end">
