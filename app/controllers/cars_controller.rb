@@ -10,6 +10,8 @@ class CarsController < ApplicationController
         lng: car.longitude
       }
     end
+
+ 
   end
 
   def new
@@ -39,6 +41,8 @@ class CarsController < ApplicationController
   end
 
   def show
+    @oneCar = Car.find(params[:id])
+    @marker = [{ lat: @oneCar.latitude, lng: @oneCar.longitude}]
   end
 
   def delete
