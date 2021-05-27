@@ -1,33 +1,39 @@
-<main class="container">
-	<div class="h1 text-center" id="pageHeaderTitle">HOT WHEELS: CAR LIST</div>
 
-		<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-	</div>
 
-	<br>
 
-<% @cars.each do |car| %>
+<div class="container-fluid">
+
+<div class="row">
+		<div class="col px-0">
+			<h1 class="ml-0 title-showpage px-0" style="background-color: white">&nbsp;OUR CARS</h1>
+			</div></div>
+<div class="row mt-3">
+<div class="col-7">
+	<% @cars.each do |car| %>
 	<div class="postcard blue">
 		<a class="postcard__img_link" href="#">
-			<img class="postcard__img" src="<%= car.photo%>" alt="Image Title" />
+		<a href="<%=car_path(car.id)%>">	<img class="postcard__img" src="<%= car.photo%>" alt="Image Title" /> </a>
 		</a>
 		<div class="postcard__text">
 			<h1 class="postcard__title blue">
-			<a href="<%=car_path(car.id)%>"><%=car.brand%>&nbsp;<%=car.model%>&nbsp;<%=car.year%></a>
+				<a href="<%=car_path(car.id)%>"><%=car.brand%>&nbsp;<%=car.model%>&nbsp;<%=car.year%></a>
 			</h1>
 			<div class="postcard__subtitle small">
 			</div>
 			<div class="postcard__bar"></div>
-			<div class="postcard__preview-txt">Description: this car is from YEAR, BRAND, ESPECIFICATIONS...</div>
+			<div class="postcard__preview-txt text-left"> <%=car.description%></div>
 			<ul class="postcard__tagbox">
-				<li class="tag__item "><a href="#"><i class="fas fa-car mr-2"></i>Rent me</a></li>
-				<li class="tag__item"><i class="fas fa-map-marker-alt mr-2"></i>Location</li>
+				<li class="tag__item "><a href="<%= new_car_booking_path(car) %>"><i class="fas fa-car mr-2"></i>Rent me</a></li>
+				<li class="tag__item"><i class="fas fa-map-marker-alt mr-2"></i><%=car.location%></li>
 			</ul>
-		</div>
-	</div>
+</div></div>
 	<% end %>
 
-</main>
+</div>
+<div class="col-5">
+	<div class="mapcard" id="map" style="width: 100%; height: 600px;  position: sticky; top: 10px;" data-markers="<%= @markers.to_json %>"
+		data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+	</div>
+</div>
+
+</div></div></div>
