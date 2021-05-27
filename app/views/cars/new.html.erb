@@ -1,18 +1,18 @@
 <div class="container-fluid">
-<h1>Add your car</h1>
-<div class="row justify-content-center">
-<div class="col-6 ">
 
+<div class="row justify-content-center p-3 m-5 postcard blue">
+
+<div class="col-6 ">
+<h1>ADD YOUR CAR</h1>
 <%= simple_form_for([@car]) do |f| %>
-  <%= f.input :title, placeholder: "Model, brand, year" %><br>
-  <%= f.input :model, placeholder: "Model" %><br>
-  <%= f.input :brand, placeholder: "Describe your car" %><br>
-  <%= f.input :year, placeholder: "Describe your car" %><br>
-  <%= f.input :location, placeholder: "Describe your car" %><br>
-  <%= f.input :price, placeholder: "Describe your car" %><br>
-  <%= f.input :description, placeholder: "Describe your car" %><br>
-  <%= f.text_field :pickup_location %><br>
-  <%= f.submit %>
+  <%= f.input :title, placeholder: "Model, brand, year", class: "form-control form-btn" %>
+  <%= f.input :model, placeholder: "Model", class: "form-control form-btn" %>
+  <%= f.input :brand, placeholder: "What brand is your car?", class: "form-control form-btn" %>
+  <%= f.input :year, placeholder: "Year", class: "form-control form-btn" %>
+  <%= f.input :location, placeholder: "Where its located", class: "form-control form-btn" %>
+  <%= f.input :price, placeholder: "$999.00", class: "form-control form-btn" %>
+  <%= f.input :description, placeholder: "Describe your car", class: "form-control form-btn" %>
+  <%= f.submit :Add, class: "btn btn btn-dark " %>
 <% end %>
 </div>
 </div>
