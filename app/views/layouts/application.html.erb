@@ -34,12 +34,6 @@
      <% end %>
      </div>
 
-      <div class="nav-item text-right mr-sm-2 d-flex justify-content-end">
-      <a href="#" data-toggle="modal" data-target="#modal">
-      <button type="add-btn" class="btn btn-dark mx-3">Log in</button> </a>
-      <a href="#" data-toggle="modal" data-target="#modalUp"> <button type="sign-btn" class="btn btn-dark mr-3">Sign Up</button></a>
- </div>
-
 
 </nav>
 
@@ -69,27 +63,24 @@
     </div>
   </div>
 
-
-
   <%= yield %>
   <br><br>
   <div class="container-fluid pt-4 mb-4" style="margin-top:80px">
     <div class="row navbar" style="background-color: #F4F4F4">
 
         <div class="col-4"  >
-          <p class="copy" id="left-copy">&copy; HotWheels 2021</p>  </div>
-
-        <div class="col-4" >
-      </div>
+          <p class="copy" id="left-copy">&copy; HotWheels 2021</p>
+        </div>
 
         <div class="col-4 text-right">
               <p><a href="<%= root_path %>"> <button type="button"
             class="btn btn-secondary btn-lg btn-footer" id="home-btn">Home Page</button></a>
 
-           <a href="mailto:email@email.com"> <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></a></p></div>
+           <a href="mailto:email@email.com"> <button type="button" class="btn btn-secondary btn-lg btn-footer" id="contact-btn">Contact Us</button></a></p>
+        </div>
 
-
-    </div></div>
+    </div>
+  </div>
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
