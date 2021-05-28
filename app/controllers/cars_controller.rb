@@ -2,14 +2,20 @@ class CarsController < ApplicationController
   before_action :find_id, only: [:edit, :update, :show, :delete]
 
   def index
-    @cars = Car.all
-
+    if params[:query].present?
+      @cars = Car.search_by_model_and_brand(params[:query])
+      params[:query] = ''
+    else
+      @cars = Car.all
+    end
     @markers = @cars.geocoded.map do |car|
       {
         lat: car.latitude,
         lng: car.longitude
       }
     end
+
+
   end
 
   def new
@@ -39,6 +45,8 @@ class CarsController < ApplicationController
   end
 
   def show
+    @oneCar = Car.find(params[:id])
+    @marker = [{ lat: @oneCar.latitude, lng: @oneCar.longitude}]
   end
 
   def delete
