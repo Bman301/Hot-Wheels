@@ -11,8 +11,12 @@
   <p>End date</p>
   <%= f.datetime_field :end_date, class: "form-control form-btn border-light rounded-pill m-1" %><br>
   <%= f.input :pickup_location, placeholder: "Pick up location", class: "form-control form-btn" %><br>
+  <span>Do you want insurance?</span>
+  <%= f.check_box :insurance%><br>
   <%= f.button :submit, class: "btn btn-dark mx-3" %>
 <% end %>
+
+<%=%>
 
 
 </div>

@@ -10,8 +10,9 @@ class BookingsController < ApplicationController
     @car = Car.find(params[:car_id])
     @car.update(status: "busy")
     @booking.car = @car
+    @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to bookings_path
     else
       render :new
     end
@@ -21,9 +22,13 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def show
+     @booking = Booking.find(params[:car_id])
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:status, :start_date, :end_date, :pickup_location, :insurance, :comment, :car_id, :user_id)
+    params.require(:booking).permit( :start_date, :end_date, :pickup_location, :insurance)
   end
 end
