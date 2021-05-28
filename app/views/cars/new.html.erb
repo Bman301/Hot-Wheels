@@ -1,8 +1,8 @@
-<div class="container-fluid">
-<h1>Add your car</h1>
-<div class="row justify-content-center">
-<div class="col-6 ">
+<div class="container justify-content-center">
 
+<div class="row p-3 m-5 w-75 mx-auto postcard blue">
+<div class="col-12">
+<h1>Add your car</h1>
 <%= simple_form_for([@car]) do |f| %>
   <%= f.input :title, placeholder: "Model, brand, year" %><br>
   <%= f.input :model, placeholder: "Model" %><br>
@@ -11,7 +11,7 @@
   <%= f.input :location, placeholder: "Describe your car" %><br>
   <%= f.input :price, placeholder: "Describe your car" %><br>
   <%= f.input :description, placeholder: "Describe your car" %><br>
-  <%= f.text_field :pickup_location %><br>
+  <%= f.input :photo, as: :file %><br>
   <%= f.submit %>
 <% end %>
 </div>
