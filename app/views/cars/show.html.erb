@@ -21,7 +21,7 @@
 
 						<article class="postcard blue mt-4">
 
-							<img class="postcard__img" src="<%= @car.photo%>" alt="car photo" />
+							<img class="postcard__img" src="<%= cl_image_path @car.photo.key %>" alt="car photo" />
 
 							<div class="postcard__text">
 								<h1 class="postcard__title blue"><%= @car.brand %>&nbsp;<%= @car.model %>: <%= @car.year %></h1>

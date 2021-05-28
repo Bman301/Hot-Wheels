@@ -8,7 +8,6 @@ class CreateCars < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :price
       t.text :description
-      t.string :photo
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
