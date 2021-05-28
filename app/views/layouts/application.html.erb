@@ -26,14 +26,12 @@
     <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
       <div class="w-25">
         <%= form_tag cars_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-        class: "form-control border-dark rounded-pill",
-        placeholder: "...Search by Brand or Model"
-        %>
-      </div>
-      <div class="rounded">
-        <%= submit_tag "Search", class: "btn btn btn-dark mx-3" %>
+          <%= text_field_tag :query, '', class: "form-control border-dark rounded-pill",
+          placeholder: "...Search by Brand or Model"
+          %>
+        </div>
+        <div class="rounded">
+          <%= submit_tag "Search", class: "btn btn btn-dark mx-3" %>
         <% end %>
       </div>
       <div class="nav-item text-right mr-sm-2 d-flex justify-content-end">
