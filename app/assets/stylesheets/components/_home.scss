@@ -6,3 +6,27 @@
     line-height: 80%;
 }
 
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+  }
+  
+  .blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 50px;
+  }
+
+.row .card-trip-user {
+    position: absolute;
+    right: 16px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+}
