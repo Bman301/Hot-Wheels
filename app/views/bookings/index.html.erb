@@ -1,8 +1,32 @@
-<h1>All bookings</h1>
-  <% @bookings.each do |booking| %>
-<h3><%= booking.status %></h3>
-<h3><%= booking.start_date%></h3>
-<h3><%= booking.end_date%></h3>
-<h3><%= booking.pickup_location%></h3>
-<h3><%= booking.insurance%></h3>
-  <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col px-0">
+			<h1 class="ml-0 title-showpage px-0" style="background-color: white">&nbsp;ALL BOOKINGS</h1>
+		</div>
+  </div>
+     
+  <div class="row inline-block">
+      <br>      
+    <% @bookings.each do |booking| %>
+    <div class="col-6">
+         <div class="postcard blue">
+	        	<a class="postcard__img_link" href="#">
+	        	<a href="<%=car_path(booking.car_id)%>">	<img class="postcard__img" src="<%= Car.find(booking.car_id).photo %>" alt="Image booking" /> </a>
+	        	</a>
+          <div class="postcard__text">
+              <h1 class="postcard__title blue">
+                <p>Booking #<%= booking.id %></p>
+              </h1>
+              <ul class="postcard__tagbox">
+                <li class="tag__item"><i class="far fa-calendar-alt mr-2"></i><%=booking.start_date%></li>
+                <li class="tag__item"><i class="fas fa-flag-checkered mr-2"></i><%=booking.end_date%></li>
+                  <a href="https://www.google.com/maps/search/?api=1&<%=booking.pickup_location%>" target="_blank"><li class="tag__item"><i class="fas fa-map-marker-alt mr-2"></i><%=booking.pickup_location%></li></a>
+                <li class="tag__item"><i class="fas fa-car-crash mr-2"></i><%= booking.insurance%></li>
+              </ul>
+          </div>
+         </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+     
