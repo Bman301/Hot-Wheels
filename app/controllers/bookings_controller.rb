@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   private
