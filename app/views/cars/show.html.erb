@@ -1,6 +1,6 @@
 <style>
 	.show {
-		background-image: url("<%= @car.photo%>");
+		background-image: url("<%= cl_image_path @car.photo.key %>");
 		height: 100%;
 		background-position: center;
 		background-repeat: no-repeat;
