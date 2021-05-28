@@ -1,14 +1,16 @@
 
 <div class="container-fluid ">
 
-<div class="row justify-content-center p-3 m-5 postcard blue">
+<div class="row p-3 m-5 w-50 mx-auto postcard blue">
 
-<div class="col-6 text-center ">
+<div class="col-12">
 <h1><%= @car.brand %> <%= @car.model %> <%= @car.year %></h1>
 <%= simple_form_for([@car, @booking]) do |f| %>
-  <%= f.datetime_field :start_date, class: "form-control form-btn border-dark rounded-pill m-1" %><br>
-  <%= f.datetime_field :end_date, class: "form-control form-btn border-dark rounded-pill m-1" %><br>
-  <%= f.text_field :pickup_location, placeholder: "Pick up location", class: "form-control form-btn" %><br>
+  <p>Start date</p>
+  <%= f.datetime_field :start_date, class: "form-control form-btn border-light rounded-pill m-1" %><br>
+  <p>End date</p>
+  <%= f.datetime_field :end_date, class: "form-control form-btn border-light rounded-pill m-1" %><br>
+  <%= f.input :pickup_location, placeholder: "Pick up location", class: "form-control form-btn" %><br>
   <%= f.button :submit, class: "btn btn-dark mx-3" %>
 <% end %>
 
