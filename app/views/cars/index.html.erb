@@ -20,10 +20,15 @@
 			<div class="postcard__bar"></div>
 			<div class="postcard__preview-txt text-left"> <%=car.description%></div>
 			<ul class="postcard__tagbox">
-				<li class="tag__item "><a href="<%= new_car_booking_path(car) %>"><i class="fas fa-car mr-2"></i>Rent me</a></li>
-				<li class="tag__item"><i class="fas fa-map-marker-alt mr-2"></i><%=car.location%></li>
+		    <% if car.status == "busy" %>
+						<li class="tag__item "></i>Car is not available!</li>
+					<% else %>
+						<li class="tag__item "><a href="<%= new_car_booking_path(car) %>"><i class="fas fa-car mr-2"></i>Rent me</a></li>
+						<li class="tag__item"><i class="fas fa-map-marker-alt mr-2"></i><%=car.location%></li>
+				<% end %>
 			</ul>
-</div></div>
+    </div>
+		</div>
 	<% end %>
 
 </div>
