@@ -1,4 +1,5 @@
 require 'faker'
+require "open-uri"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -23,7 +24,9 @@ carImages = ["https://bit.ly/34nxkbX", "https://bit.ly/3vqhoSa", "https://bit.ly
 locations = ["Álvaro Obregón, Mexico City", "Polanco, Mexico City", "San Pedro de los Pinos, Mexico City", "Santa María La Ribera, Mexico City", "Roma Norte, Mexico City", "Del Valle Centro, Mexico City", "Agrícola Oriental, Mexico City", "Narvarte Poniente, Mexico City", "Agrícola Pantitlán, Mexico City", "Condesa, Mexico City", "Ampliación Granada, Mexico City", "Tlalpan, Mexico", "Iztacalco, Mexico City", "Benito Juárez, Mexico City"]
 
 10.times do
-  Car.create!(
+
+  file = URI.open(carImages.sample)
+  car = Car.new(
     model: Faker::Vehicle.model,
     brand: Faker::Vehicle.make,
     year: rand(1980..2021),
@@ -33,8 +36,9 @@ locations = ["Álvaro Obregón, Mexico City", "Polanco, Mexico City", "San Pedro
     description: Faker::Vehicle.standard_specs.join,
     user_id: rand(firstId..lastId),
     review: Faker::Quote.robin,
-    photo: carImages.sample
   )
+  car.photo.attach(io: file, filename: carImages.sample, content_type: 'image/png')
+  car.save
 end
 
 statusAvail = ["Available", "Busy"]

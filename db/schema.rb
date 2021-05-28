@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 2021_05_28_180239) do
     t.string "title"
     t.string "price"
     t.text "description"
-    t.string "photo"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
