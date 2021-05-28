@@ -20,7 +20,7 @@ end
 
 firstId = User.first.id
 lastId = User.last.id
-carImages = ["https://bit.ly/34nxkbX", "https://bit.ly/3vqhoSa", "https://bit.ly/3fNhEUD", "https://bit.ly/3ui9nxe", "https://bit.ly/3wBIRAw", "https://bit.ly/3yFGbne", "https://bit.ly/3hVkIkk", "https://bit.ly/34gzUR0", "https://bit.ly/2SyoPYE", "https://wallpapercave.com/wp/8K3mVCl.jpg", "https://bit.ly/3oQ8MBR", "https://bit.ly/3fLtWg7", "https://wallpaperaccess.com/full/1333809.jpg", "https://bit.ly/3vomI8p", "https://bit.ly/3yEax9C", "https://bit.ly/3bVsxml", "https://bit.ly/3oQMEHk"]
+carImages = ["https://cdn.cheapism.com/images/28598349912_556032b482_k.max-784x410.jpg","https://cdn.cheapism.com/images/Rusty-s_TV_and_Movie_Car_Museum_Jackson_TN_0.max-784x410.jpg","https://cdn.cheapism.com/images/032718_cars_we_would_like_to_see_again_slide.max-784x410.jpg", "https://cdn.cheapism.com/images/101018_greatest_movie_tv_cars_slide_4_fs.max-784x410.jpg", "https://cdn.cheapism.com/images/1635px-Herbie_film_car_from_The_Love_Bug.max-784x410.jpg", "https://cdn.cheapism.com/images/101018_greatest_movie_tv_cars_slide_6_fs.max-784x410.jpg", "https://cdn.cheapism.com/images/1623px-1959_Cadillac_Ecto-1_12227773836.max-784x410.jpg", "https://cdn.cheapism.com/images/101018_greatest_movie_tv_cars_slide_10_fs.max-784x410.jpg", "https://cdn.cheapism.com/images/101018_greatest_movie_tv_cars_slide_13_fs.max-784x410.jpg", "https://cdn.cheapism.com/images/101018_greatest_movie_tv_cars_slide_15_fs.max-784x410.jpg"]
 locations = ["Álvaro Obregón, Mexico City", "Polanco, Mexico City", "San Pedro de los Pinos, Mexico City", "Santa María La Ribera, Mexico City", "Roma Norte, Mexico City", "Del Valle Centro, Mexico City", "Agrícola Oriental, Mexico City", "Narvarte Poniente, Mexico City", "Agrícola Pantitlán, Mexico City", "Condesa, Mexico City", "Ampliación Granada, Mexico City", "Tlalpan, Mexico", "Iztacalco, Mexico City", "Benito Juárez, Mexico City"]
 
 10.times do
@@ -37,7 +37,7 @@ locations = ["Álvaro Obregón, Mexico City", "Polanco, Mexico City", "San Pedro
     user_id: rand(firstId..lastId),
     review: Faker::Quote.robin,
   )
-  car.photo.attach(io: file, filename: carImages.sample, content_type: 'image/png')
+  car.photo.attach(io: file, filename: carImages.sample, content_type: 'image/jpg')
   car.save
 end
 
