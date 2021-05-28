@@ -45,7 +45,7 @@
                 aria-expanded="false" src="https://bit.ly/3fOsxWn" />
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<%= bookings_path(@user) %>">All Bookings</a>
-                <a class="dropdown-item" href="<%= destroy_user_session_path(@user) %>">Log-Out</a>
+                <a class="dropdown-item" <%= link_to "Log out", destroy_user_session_path, :method => :delete %> </a>
               </div>
             </li>
           </ul>
