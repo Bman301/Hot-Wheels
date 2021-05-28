@@ -11,7 +11,7 @@
     <div class="col-6">
          <div class="postcard blue">
 	        	<a class="postcard__img_link" href="#">
-	        	<a href="<%=car_path(booking.car_id)%>">	<img class="postcard__img" src="<%= Car.find(booking.car_id).photo %>" alt="Image booking" /> </a>
+	        	<a href="<%=car_path(booking.car_id)%>">	<img class="postcard__img" src="<%= Car.find(booking.car_id).photo %>" alt="Image booking" style="height:100%;width:100%"/> </a>
 	        	</a>
           <div class="postcard__text">
               <h1 class="postcard__title blue">

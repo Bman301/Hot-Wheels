@@ -9,7 +9,7 @@
 	<% @cars.each do |car| %>
 	<div class="postcard blue">
 		<a class="postcard__img_link" href="#">
-		<a href="<%=car_path(car.id)%>">	<img class="postcard__img" src="<%= car.photo%>" alt="Image Title" /> </a>
+		<a href="<%=car_path(car.id)%>">	<img class="postcard__img" src="<%= car.photo%>" alt="car photo" style="height:100%;width:100%" /> </a>
 		</a>
 		<div class="postcard__text">
 			<h1 class="postcard__title blue">
